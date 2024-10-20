@@ -4,7 +4,9 @@
   "main": "backend/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon backend/index.js"
+    "dev": "NODE_ENV=development nodemon backend/index.js",
+    "start": " node backend/index.js",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +23,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.7.2",
     "nodemailer": "^6.9.15",
+    "path": "^0.12.7",
     "twilio": "^5.3.4"
   },
   "devDependencies": {
